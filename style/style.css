@@ -21,34 +21,7 @@ body {
     "people";
 }
 
-/* ===== cities ===== */
-
-.cities {
-  display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 45px repeat(3, 370px);
-  gap: 15px 15px;
-  grid-template-areas:
-    "cities-header cities-header cities-header"
-    "image01 image02 image02"
-    "image03 image03 image04"
-    "image05 image06 image06";
-  grid-area: cities;
-}
-
-.cities-header {
-  grid-area: cities-header;
-}
-
-.image01 {
-  grid-area: image01;
-  background-image: linear-gradient(
-      360deg,
-      #241f24 0%,
-      rgba(91, 91, 91, 0.447552) 34.11%,
-      rgba(187, 186, 192, 0.26) 62.5%
-    ),
-    url("../img/cities/image1.jpg");
+div[class^="image"] {
   background-repeat: no-repeat;
   background-size: cover, cover;
   border-radius: 20px;
@@ -60,34 +33,78 @@ body {
     "icon-left icon-right"
     "text-left text-right";
 }
+div[class^="image"]:hover .icon-left {
+  transition: all 2s ease-out;
+  opacity: 1;
+}
+div[class^="image"]:hover .icon-right {
+  transition: all 3s ease-out;
+  opacity: 1;
+}
 
+/***** common icons and text labels for all images *****/
 .icon-left {
   grid-area: icon-left;
+  background: url("../img/heart.svg");
+  width: 40px;
+  height: 40px;
   align-self: start;
   justify-self: start;
   cursor: pointer;
+  opacity: 0;
 }
-
 .icon-right {
   grid-area: icon-right;
+  background: url("../img/download.svg");
+  width: 40px;
+  height: 40px;
   align-self: start;
   justify-self: end;
   cursor: pointer;
+  opacity: 0;
 }
-
 .text-left {
   grid-area: text-left;
   align-self: end;
   justify-self: start;
 }
-
 .text-right {
   grid-area: text-right;
   align-self: end;
   justify-self: end;
 }
 
-.image02 {
+/* ===== cities ===== */
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 45px repeat(3, 370px);
+  gap: 15px 15px;
+  grid-template-areas:
+    "cities__title cities__title cities__title"
+    "image01 image02 image02"
+    "image03 image03 image04"
+    "image05 image06 image06";
+  grid-area: cities;
+}
+
+.cities__title {
+  grid-area: cities__title;
+}
+
+.cities__image01 {
+  grid-area: image01;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image1.jpg");
+}
+
+.cities__image02 {
   grid-area: image02;
   background-image: linear-gradient(
       360deg,
@@ -96,12 +113,9 @@ body {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  border-radius: 20px;
 }
 
-.image03 {
+.cities__image03 {
   grid-area: image03;
   background-image: linear-gradient(
       360deg,
@@ -110,12 +124,9 @@ body {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  border-radius: 20px;
 }
 
-.image04 {
+.cities__image04 {
   grid-area: image04;
   background-image: linear-gradient(
       360deg,
@@ -124,12 +135,9 @@ body {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image4.jpg");
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  border-radius: 20px;
 }
 
-.image05 {
+.cities__image05 {
   grid-area: image05;
   background-image: linear-gradient(
       360deg,
@@ -138,11 +146,9 @@ body {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  border-radius: 20px;
 }
-.image06 {
+
+.cities__image06 {
   grid-area: image06;
   background-image: linear-gradient(
       360deg,
@@ -151,9 +157,6 @@ body {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image6.jpg");
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  border-radius: 20px;
 }
 
 /* ===== nature ===== */
