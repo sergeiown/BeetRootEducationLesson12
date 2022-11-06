@@ -9,11 +9,12 @@ body {
 
 .container {
   max-width: 1170px;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 100%;
+  grid-template-rows: fit-content fit-content fit-content;
   gap: 120px 0px;
   grid-template-areas:
     "cities"
@@ -80,7 +81,7 @@ div[class^="image"]:hover .icon-right {
 .cities {
   display: grid;
   grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 45px repeat(3, 370px);
+  grid-template-rows: 125px repeat(3, 370px);
   gap: 15px 15px;
   grid-template-areas:
     "cities__title   cities__title   cities__title"
@@ -92,6 +93,7 @@ div[class^="image"]:hover .icon-right {
 
 .cities__title {
   grid-area: cities__title;
+  justify-self: center;
 }
 
 .cities__image01 {
@@ -165,7 +167,7 @@ div[class^="image"]:hover .icon-right {
 .nature {
   display: grid;
   grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 45px repeat(4, 370px);
+  grid-template-rows: 125px repeat(4, 370px);
   gap: 15px 15px;
   grid-template-areas:
     "nature__title   nature__title   nature__title"
@@ -178,6 +180,7 @@ div[class^="image"]:hover .icon-right {
 
 .nature__title {
   grid-area: nature__title;
+  justify-self: center;
 }
 
 .nature__image01 {
@@ -249,6 +252,132 @@ div[class^="image"]:hover .icon-right {
 
 /* ⇓ ⇓ ⇓ ⇓ ⇓ people ⇓ ⇓ ⇓ ⇓ ⇓ */
 .people {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(5, 370px);
+  gap: 15px 15px;
+  grid-template-areas:
+    "people__title   people__title   people__title"
+    "people__image01 people__image02 people__image03"
+    "people__image04 people__image02 people__image06"
+    "people__image07 people__image05 people__image06"
+    "people__image07 people__image08 people__image08"
+    "people__image09 people__image09 people__image10";
   grid-area: people;
+}
+
+.people__title {
+  grid-area: people__title;
+  justify-self: center;
+}
+
+.people__image01 {
+  grid-area: people__image01;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image1.jpg");
+}
+
+.people__image02 {
+  grid-area: people__image02;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image2.jpg");
+}
+
+.people__image03 {
+  grid-area: people__image03;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image3.jpg");
+}
+
+.people__image04 {
+  grid-area: people__image04;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image4.jpg");
+}
+
+.people__image05 {
+  grid-area: people__image05;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image5.jpg");
+}
+
+.people__image06 {
+  grid-area: people__image06;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image6.jpg");
+}
+
+.people__image07 {
+  grid-area: people__image07;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image7.jpg");
+}
+
+.people__image08 {
+  grid-area: people__image08;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image8.jpg");
+}
+
+.people__image09 {
+  grid-area: people__image09;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image9.jpg");
+}
+
+.people__image10 {
+  grid-area: people__image10;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image10.jpg");
 }
 /* ⇧ ⇧ ⇧ ⇧ ⇧ people ⇧ ⇧ ⇧ ⇧ ⇧ */
