@@ -1,5 +1,6 @@
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Delius Unicase", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
 
 div[class^="image"] {
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover, cover;
   border-radius: 20px;
   display: grid;
@@ -35,13 +37,35 @@ div[class^="image"] {
     "text-left text-right";
 }
 
-div[class^="image"]:hover .icon-left {
+div[class^="image"]:hover div[class^="icon"] {
   transition: all 2s ease-out;
   opacity: 1;
 }
-div[class^="image"]:hover .icon-right {
-  transition: all 3s ease-out;
-  opacity: 1;
+
+h1 {
+  font-family: "Delius Unicase";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+div[class$="text-left"] {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+div[class$="text-right"] {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #e0e0e0;
 }
 
 /* ⇓ ⇓ ⇓ ⇓ ⇓ common icons and text labels for all images ⇓ ⇓ ⇓ ⇓ ⇓ */
