@@ -10,9 +10,7 @@ body {
 
 .container {
   max-width: 1170px;
-  margin-top: 120px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 120px auto 120px auto;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: fit-content fit-content fit-content;
@@ -38,7 +36,7 @@ div[class^="image"] {
 }
 
 div[class^="image"]:hover div[class^="icon"] {
-  transition: all 2s ease-out;
+  transition: all 0.8s ease-out;
   opacity: 1;
 }
 
@@ -71,7 +69,12 @@ div[class$="text-right"] {
 /* ⇓ ⇓ ⇓ ⇓ ⇓ common icons and text labels for all images ⇓ ⇓ ⇓ ⇓ ⇓ */
 .icon-left {
   grid-area: icon-left;
-  background: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+  background-image: url("../img/heart.svg");
+  background-color: #e0e0e0;
+  border-radius: 8px;
   width: 40px;
   height: 40px;
   align-self: start;
@@ -79,9 +82,18 @@ div[class$="text-right"] {
   cursor: pointer;
   opacity: 0;
 }
+.icon-left:hover {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
 .icon-right {
   grid-area: icon-right;
-  background: url("../img/download.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+  background-image: url("../img/download.svg");
+  background-color: #e0e0e0;
+  border-radius: 8px;
   width: 40px;
   height: 40px;
   align-self: start;
@@ -89,6 +101,10 @@ div[class$="text-right"] {
   cursor: pointer;
   opacity: 0;
 }
+.icon-right:hover {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
 .text-left {
   grid-area: text-left;
   align-self: end;
@@ -130,6 +146,10 @@ div[class$="text-right"] {
     ),
     url("../img/cities/image1.jpg");
 }
+.cities__image01:hover {
+  grid-area: cities__image01;
+  background-image: url("../img/cities/image1.jpg");
+}
 
 .cities__image02 {
   grid-area: cities__image02;
@@ -140,6 +160,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image2.jpg");
+}
+.cities__image02:hover {
+  grid-area: cities__image02;
+  background-image: url("../img/cities/image2.jpg");
 }
 
 .cities__image03 {
@@ -152,6 +176,10 @@ div[class$="text-right"] {
     ),
     url("../img/cities/image3.jpg");
 }
+.cities__image03:hover {
+  grid-area: cities__image03;
+  background-image: url("../img/cities/image3.jpg");
+}
 
 .cities__image04 {
   grid-area: cities__image04;
@@ -162,6 +190,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image4.jpg");
+}
+.cities__image04:hover {
+  grid-area: cities__image04;
+  background-image: url("../img/cities/image4.jpg");
 }
 
 .cities__image05 {
@@ -174,6 +206,10 @@ div[class$="text-right"] {
     ),
     url("../img/cities/image5.jpg");
 }
+.cities__image05:hover {
+  grid-area: cities__image05;
+  background-image: url("../img/cities/image5.jpg");
+}
 
 .cities__image06 {
   grid-area: cities__image06;
@@ -184,6 +220,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/cities/image6.jpg");
+}
+.cities__image06:hover {
+  grid-area: cities__image06;
+  background-image: url("../img/cities/image6.jpg");
 }
 /* ⇧ ⇧ ⇧ ⇧ ⇧ cities ⇧ ⇧ ⇧ ⇧ ⇧ */
 
@@ -217,6 +257,10 @@ div[class$="text-right"] {
     ),
     url("../img/nature/image1.jpg");
 }
+.nature__image01:hover {
+  grid-area: nature__image01;
+  background-image: url("../img/nature/image1.jpg");
+}
 
 .nature__image02 {
   grid-area: nature__image02;
@@ -227,6 +271,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/nature/image2.jpg");
+}
+.nature__image02:hover {
+  grid-area: nature__image02;
+  background-image: url("../img/nature/image2.jpg");
 }
 
 .nature__image03 {
@@ -239,6 +287,10 @@ div[class$="text-right"] {
     ),
     url("../img/nature/image3.jpg");
 }
+.nature__image03:hover {
+  grid-area: nature__image03;
+  background-image: url("../img/nature/image3.jpg");
+}
 
 .nature__image04 {
   grid-area: nature__image04;
@@ -249,6 +301,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/nature/image4.jpg");
+}
+.nature__image04:hover {
+  grid-area: nature__image04;
+  background-image: url("../img/nature/image4.jpg");
 }
 
 .nature__image05 {
@@ -261,6 +317,10 @@ div[class$="text-right"] {
     ),
     url("../img/nature/image5.jpg");
 }
+.nature__image05:hover {
+  grid-area: nature__image05;
+  background-image: url("../img/nature/image5.jpg");
+}
 
 .nature__image06 {
   grid-area: nature__image06;
@@ -271,6 +331,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/nature/image6.jpg");
+}
+.nature__image06:hover {
+  grid-area: nature__image06;
+  background-image: url("../img/nature/image6.jpg");
 }
 /* ⇧ ⇧ ⇧ ⇧ ⇧ nature ⇧ ⇧ ⇧ ⇧ ⇧ */
 
@@ -305,6 +369,10 @@ div[class$="text-right"] {
     ),
     url("../img/people/image1.jpg");
 }
+.people__image01:hover {
+  grid-area: people__image01;
+  background-image: url("../img/people/image1.jpg");
+}
 
 .people__image02 {
   grid-area: people__image02;
@@ -315,6 +383,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/people/image2.jpg");
+}
+.people__image02:hover {
+  grid-area: people__image02;
+  background-image: url("../img/people/image2.jpg");
 }
 
 .people__image03 {
@@ -327,6 +399,10 @@ div[class$="text-right"] {
     ),
     url("../img/people/image3.jpg");
 }
+.people__image03:hover {
+  grid-area: people__image03;
+  background-image: url("../img/people/image3.jpg");
+}
 
 .people__image04 {
   grid-area: people__image04;
@@ -337,6 +413,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/people/image4.jpg");
+}
+.people__image04:hover {
+  grid-area: people__image04;
+  background-image: url("../img/people/image4.jpg");
 }
 
 .people__image05 {
@@ -349,6 +429,10 @@ div[class$="text-right"] {
     ),
     url("../img/people/image5.jpg");
 }
+.people__image05:hover {
+  grid-area: people__image05;
+  background-image: url("../img/people/image5.jpg");
+}
 
 .people__image06 {
   grid-area: people__image06;
@@ -359,6 +443,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/people/image6.jpg");
+}
+.people__image06:hover {
+  grid-area: people__image06;
+  background-image: url("../img/people/image6.jpg");
 }
 
 .people__image07 {
@@ -371,6 +459,10 @@ div[class$="text-right"] {
     ),
     url("../img/people/image7.jpg");
 }
+.people__image07:hover {
+  grid-area: people__image07;
+  background-image: url("../img/people/image7.jpg");
+}
 
 .people__image08 {
   grid-area: people__image08;
@@ -381,6 +473,10 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/people/image8.jpg");
+}
+.people__image08:hover {
+  grid-area: people__image08;
+  background-image: url("../img/people/image8.jpg");
 }
 
 .people__image09 {
@@ -393,6 +489,10 @@ div[class$="text-right"] {
     ),
     url("../img/people/image9.jpg");
 }
+.people__image09:hover {
+  grid-area: people__image09;
+  background-image: url("../img/people/image9.jpg");
+}
 
 .people__image10 {
   grid-area: people__image10;
@@ -403,5 +503,9 @@ div[class$="text-right"] {
       rgba(187, 186, 192, 0.26) 62.5%
     ),
     url("../img/people/image10.jpg");
+}
+.people__image10:hover {
+  grid-area: people__image10;
+  background-image: url("../img/people/image10.jpg");
 }
 /* ⇧ ⇧ ⇧ ⇧ ⇧ people ⇧ ⇧ ⇧ ⇧ ⇧ */
