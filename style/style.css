@@ -120,14 +120,15 @@ div[class$="text-right"] {
 /* ⇓ ⇓ ⇓ ⇓ ⇓ cities ⇓ ⇓ ⇓ ⇓ ⇓ */
 .cities {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 125px repeat(3, 370px);
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(3, 370px); */
   gap: 15px 15px;
-  grid-template-areas:
-    "cities__title   cities__title   cities__title"
-    "cities__image01 cities__image02 cities__image02"
-    "cities__image03 cities__image03 cities__image04"
-    "cities__image05 cities__image06 cities__image06";
+  grid-template:
+    "cities__title    cities__title    cities__title" 125px
+    "cities__image01 cities__image02 cities__image02" 370px
+    "cities__image03 cities__image03 cities__image04" 370px
+    "cities__image05 cities__image06 cities__image06" 370px
+    / 370px 370px 370px;
   grid-area: cities;
 }
 
@@ -230,15 +231,16 @@ div[class$="text-right"] {
 /* ⇓ ⇓ ⇓ ⇓ ⇓ nature ⇓ ⇓ ⇓ ⇓ ⇓ */
 .nature {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 125px repeat(4, 370px);
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(4, 370px); */
   gap: 15px 15px;
-  grid-template-areas:
-    "nature__title   nature__title   nature__title"
-    "nature__image01 nature__image02 nature__image02"
-    "nature__image03 nature__image03 nature__image04"
-    "nature__image03 nature__image03 nature__image04"
-    "nature__image05 nature__image06 nature__image06";
+  grid-template:
+    "nature__title    nature__title    nature__title" 125px
+    "nature__image01 nature__image02 nature__image02" 370px
+    "nature__image03 nature__image03 nature__image04" 370px
+    "nature__image03 nature__image03 nature__image04" 370px
+    "nature__image05 nature__image06 nature__image06" 370px
+    / 370px 370px 370px;
   grid-area: nature;
 }
 
@@ -341,16 +343,17 @@ div[class$="text-right"] {
 /* ⇓ ⇓ ⇓ ⇓ ⇓ people ⇓ ⇓ ⇓ ⇓ ⇓ */
 .people {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-template-rows: 125px repeat(5, 370px);
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(5, 370px); */
   gap: 15px 15px;
-  grid-template-areas:
-    "people__title   people__title   people__title"
-    "people__image01 people__image02 people__image03"
-    "people__image04 people__image02 people__image06"
-    "people__image07 people__image05 people__image06"
-    "people__image07 people__image08 people__image08"
-    "people__image09 people__image09 people__image10";
+  grid-template:
+    "people__title    people__title    people__title" 125px
+    "people__image01 people__image02 people__image03" 370px
+    "people__image04 people__image02 people__image06" 370px
+    "people__image07 people__image05 people__image06" 370px
+    "people__image07 people__image08 people__image08" 370px
+    "people__image09 people__image09 people__image10" 370px
+    / 370px 370px 370px;
   grid-area: people;
 }
 
