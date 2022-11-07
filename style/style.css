@@ -1,0 +1,519 @@
+* {
+  font-family: "Delius Unicase", cursive;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  user-select: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 120px auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, fit-content);
+  gap: 120px 0px;
+  grid-template-areas:
+    "cities"
+    "nature"
+    "people";
+}
+
+div[class^="image"] {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background: cover no-repeat center; - does not work*/
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
+  grid-template-areas:
+    "button-left button-right"
+    "text-left text-right";
+}
+
+div[class^="image"]:hover {
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
+}
+
+div[class^="image"]:hover div[class^="button"] {
+  transition: all 0.8s ease-out;
+  opacity: 1;
+}
+
+h1 {
+  font-family: "Delius Unicase";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+div[class$="text-left"] {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+div[class$="text-right"] {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #e0e0e0;
+}
+
+/* ⇓ ⇓ ⇓ ⇓ ⇓ common buttons and text labels for all images ⇓ ⇓ ⇓ ⇓ ⇓ */
+.button-left {
+  grid-area: button-left;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+  background-image: url("../img/heart.svg");
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  align-self: start;
+  justify-self: start;
+  cursor: pointer;
+  opacity: 0;
+}
+.button-left:hover {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+.button-right {
+  grid-area: button-right;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+  background-image: url("../img/download.svg");
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  align-self: start;
+  justify-self: end;
+  cursor: pointer;
+  opacity: 0;
+}
+.button-right:hover {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+.text-left {
+  grid-area: text-left;
+  align-self: end;
+  justify-self: start;
+}
+.text-right {
+  grid-area: text-right;
+  align-self: end;
+  justify-self: end;
+}
+/* ⇧ ⇧ ⇧ ⇧ ⇧ common buttons and text labels for all images ⇧ ⇧ ⇧ ⇧ ⇧ */
+
+/* ⇓ ⇓ ⇓ ⇓ ⇓ cities ⇓ ⇓ ⇓ ⇓ ⇓ */
+.cities {
+  display: grid;
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(3, 370px); */
+  gap: 15px 15px;
+  grid-template:
+    "cities__title    cities__title    cities__title" 125px
+    "cities__image01 cities__image02 cities__image02" 370px
+    "cities__image03 cities__image03 cities__image04" 370px
+    "cities__image05 cities__image06 cities__image06" 370px
+    / 370px 370px 370px;
+  grid-area: cities;
+}
+
+.cities__title {
+  grid-area: cities__title;
+  justify-self: center;
+}
+
+.cities__image01 {
+  grid-area: cities__image01;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image1.jpg");
+}
+.cities__image01:hover {
+  grid-area: cities__image01;
+  background-image: url("../img/cities/image1.jpg");
+}
+
+.cities__image02 {
+  grid-area: cities__image02;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image2.jpg");
+}
+.cities__image02:hover {
+  grid-area: cities__image02;
+  background-image: url("../img/cities/image2.jpg");
+}
+
+.cities__image03 {
+  grid-area: cities__image03;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image3.jpg");
+}
+.cities__image03:hover {
+  grid-area: cities__image03;
+  background-image: url("../img/cities/image3.jpg");
+}
+
+.cities__image04 {
+  grid-area: cities__image04;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image4.jpg");
+}
+.cities__image04:hover {
+  grid-area: cities__image04;
+  background-image: url("../img/cities/image4.jpg");
+}
+
+.cities__image05 {
+  grid-area: cities__image05;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image5.jpg");
+}
+.cities__image05:hover {
+  grid-area: cities__image05;
+  background-image: url("../img/cities/image5.jpg");
+}
+
+.cities__image06 {
+  grid-area: cities__image06;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/cities/image6.jpg");
+}
+.cities__image06:hover {
+  grid-area: cities__image06;
+  background-image: url("../img/cities/image6.jpg");
+}
+/* ⇧ ⇧ ⇧ ⇧ ⇧ cities ⇧ ⇧ ⇧ ⇧ ⇧ */
+
+/* ⇓ ⇓ ⇓ ⇓ ⇓ nature ⇓ ⇓ ⇓ ⇓ ⇓ */
+.nature {
+  display: grid;
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(4, 370px); */
+  gap: 15px 15px;
+  grid-template:
+    "nature__title    nature__title    nature__title" 125px
+    "nature__image01 nature__image02 nature__image02" 370px
+    "nature__image03 nature__image03 nature__image04" 370px
+    "nature__image03 nature__image03 nature__image04" 370px
+    "nature__image05 nature__image06 nature__image06" 370px
+    / 370px 370px 370px;
+  grid-area: nature;
+}
+
+.nature__title {
+  grid-area: nature__title;
+  justify-self: center;
+}
+
+.nature__image01 {
+  grid-area: nature__image01;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image1.jpg");
+}
+.nature__image01:hover {
+  grid-area: nature__image01;
+  background-image: url("../img/nature/image1.jpg");
+}
+
+.nature__image02 {
+  grid-area: nature__image02;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image2.jpg");
+}
+.nature__image02:hover {
+  grid-area: nature__image02;
+  background-image: url("../img/nature/image2.jpg");
+}
+
+.nature__image03 {
+  grid-area: nature__image03;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image3.jpg");
+}
+.nature__image03:hover {
+  grid-area: nature__image03;
+  background-image: url("../img/nature/image3.jpg");
+}
+
+.nature__image04 {
+  grid-area: nature__image04;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image4.jpg");
+}
+.nature__image04:hover {
+  grid-area: nature__image04;
+  background-image: url("../img/nature/image4.jpg");
+}
+
+.nature__image05 {
+  grid-area: nature__image05;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image5.jpg");
+}
+.nature__image05:hover {
+  grid-area: nature__image05;
+  background-image: url("../img/nature/image5.jpg");
+}
+
+.nature__image06 {
+  grid-area: nature__image06;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/nature/image6.jpg");
+}
+.nature__image06:hover {
+  grid-area: nature__image06;
+  background-image: url("../img/nature/image6.jpg");
+}
+/* ⇧ ⇧ ⇧ ⇧ ⇧ nature ⇧ ⇧ ⇧ ⇧ ⇧ */
+
+/* ⇓ ⇓ ⇓ ⇓ ⇓ people ⇓ ⇓ ⇓ ⇓ ⇓ */
+.people {
+  display: grid;
+  /* grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 125px repeat(5, 370px); */
+  gap: 15px 15px;
+  grid-template:
+    "people__title    people__title    people__title" 125px
+    "people__image01 people__image02 people__image03" 370px
+    "people__image04 people__image02 people__image06" 370px
+    "people__image07 people__image05 people__image06" 370px
+    "people__image07 people__image08 people__image08" 370px
+    "people__image09 people__image09 people__image10" 370px
+    / 370px 370px 370px;
+  grid-area: people;
+}
+
+.people__title {
+  grid-area: people__title;
+  justify-self: center;
+}
+
+.people__image01 {
+  grid-area: people__image01;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image1.jpg");
+}
+.people__image01:hover {
+  grid-area: people__image01;
+  background-image: url("../img/people/image1.jpg");
+}
+
+.people__image02 {
+  grid-area: people__image02;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image2.jpg");
+}
+.people__image02:hover {
+  grid-area: people__image02;
+  background-image: url("../img/people/image2.jpg");
+}
+
+.people__image03 {
+  grid-area: people__image03;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image3.jpg");
+}
+.people__image03:hover {
+  grid-area: people__image03;
+  background-image: url("../img/people/image3.jpg");
+}
+
+.people__image04 {
+  grid-area: people__image04;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image4.jpg");
+}
+.people__image04:hover {
+  grid-area: people__image04;
+  background-image: url("../img/people/image4.jpg");
+}
+
+.people__image05 {
+  grid-area: people__image05;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image5.jpg");
+}
+.people__image05:hover {
+  grid-area: people__image05;
+  background-image: url("../img/people/image5.jpg");
+}
+
+.people__image06 {
+  grid-area: people__image06;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image6.jpg");
+}
+.people__image06:hover {
+  grid-area: people__image06;
+  background-image: url("../img/people/image6.jpg");
+}
+
+.people__image07 {
+  grid-area: people__image07;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image7.jpg");
+}
+.people__image07:hover {
+  grid-area: people__image07;
+  background-image: url("../img/people/image7.jpg");
+}
+
+.people__image08 {
+  grid-area: people__image08;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image8.jpg");
+}
+.people__image08:hover {
+  grid-area: people__image08;
+  background-image: url("../img/people/image8.jpg");
+}
+
+.people__image09 {
+  grid-area: people__image09;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image9.jpg");
+}
+.people__image09:hover {
+  grid-area: people__image09;
+  background-image: url("../img/people/image9.jpg");
+}
+
+.people__image10 {
+  grid-area: people__image10;
+  background-image: linear-gradient(
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.447552) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
+    ),
+    url("../img/people/image10.jpg");
+}
+.people__image10:hover {
+  grid-area: people__image10;
+  background-image: url("../img/people/image10.jpg");
+}
+/* ⇧ ⇧ ⇧ ⇧ ⇧ people ⇧ ⇧ ⇧ ⇧ ⇧ */
