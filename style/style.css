@@ -24,7 +24,8 @@ body {
 div[class^="image"] {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover, cover;
+  background-size: cover;
+  /* background: cover no-repeat center; - does not work*/
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
