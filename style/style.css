@@ -10,10 +10,10 @@ body {
 
 .container {
   max-width: 1170px;
-  margin: 120px auto 120px auto;
+  margin: 120px auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: fit-content fit-content fit-content;
+  grid-template-rows: repeat(3, fit-content);
   gap: 120px 0px;
   grid-template-areas:
     "cities"
@@ -31,7 +31,7 @@ div[class^="image"] {
   grid-template-rows: 1fr 1fr;
   padding: 20px;
   grid-template-areas:
-    "icon-left icon-right"
+    "button-left button-right"
     "text-left text-right";
 }
 
@@ -39,7 +39,7 @@ div[class^="image"]:hover {
   filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
 }
 
-div[class^="image"]:hover div[class^="icon"] {
+div[class^="image"]:hover div[class^="button"] {
   transition: all 0.8s ease-out;
   opacity: 1;
 }
@@ -70,9 +70,9 @@ div[class$="text-right"] {
   color: #e0e0e0;
 }
 
-/* ⇓ ⇓ ⇓ ⇓ ⇓ common icons and text labels for all images ⇓ ⇓ ⇓ ⇓ ⇓ */
-.icon-left {
-  grid-area: icon-left;
+/* ⇓ ⇓ ⇓ ⇓ ⇓ common buttons and text labels for all images ⇓ ⇓ ⇓ ⇓ ⇓ */
+.button-left {
+  grid-area: button-left;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px, 20px;
@@ -86,12 +86,12 @@ div[class$="text-right"] {
   cursor: pointer;
   opacity: 0;
 }
-.icon-left:hover {
+.button-left:hover {
   background-color: rgba(224, 224, 224, 0.5);
 }
 
-.icon-right {
-  grid-area: icon-right;
+.button-right {
+  grid-area: button-right;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px, 20px;
@@ -105,7 +105,7 @@ div[class$="text-right"] {
   cursor: pointer;
   opacity: 0;
 }
-.icon-right:hover {
+.button-right:hover {
   background-color: rgba(224, 224, 224, 0.5);
 }
 
@@ -119,7 +119,7 @@ div[class$="text-right"] {
   align-self: end;
   justify-self: end;
 }
-/* ⇧ ⇧ ⇧ ⇧ ⇧ common icons and text labels for all images ⇧ ⇧ ⇧ ⇧ ⇧ */
+/* ⇧ ⇧ ⇧ ⇧ ⇧ common buttons and text labels for all images ⇧ ⇧ ⇧ ⇧ ⇧ */
 
 /* ⇓ ⇓ ⇓ ⇓ ⇓ cities ⇓ ⇓ ⇓ ⇓ ⇓ */
 .cities {
